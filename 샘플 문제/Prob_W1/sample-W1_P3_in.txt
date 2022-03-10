@@ -1,0 +1,51 @@
+1000 50
+add 66 9588
+find_min
+set 796 8814
+print
+remove 41
+find_min
+remove 571
+find_min
+set 891 2410
+set 305 905
+at 395
+set 325 8725
+remove 751
+find_min
+remove 426
+print
+set 578 9896
+set 911 4227
+find_min
+set 318 8884
+print
+at 494
+find_min
+at 104
+at 414
+print
+set 965 6722
+set 184 4011
+at 429
+at 396
+remove 5
+find_min
+at 820
+remove 283
+add 143 2690
+print
+remove 895
+print
+add 138 9802
+print
+remove 156
+print
+at 655
+remove 145
+add 124 8348
+add 189 2061
+find_min
+add 999 5313
+print
+add 749 8463

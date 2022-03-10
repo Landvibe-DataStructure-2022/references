@@ -1,0 +1,51 @@
+1000 50
+remove 263
+set 515 7606
+set 544 6349
+find_max
+at 403
+print
+set 249 7820
+remove 775
+remove 450
+print
+add 340 7565
+remove 248
+at 834
+find_max
+print
+add 713 5497
+add 925 4444
+find_max
+print
+print
+remove 843
+set 220 1357
+at 429
+at 52
+find_max
+at 439
+add 758 6723
+remove 211
+at 52
+at 150
+add 906 7591
+add 343 759
+add 577 7436
+add 251 1119
+remove 441
+at 129
+print
+add 351 9944
+find_max
+print
+find_max
+remove 379
+at 805
+remove 181
+print
+print
+set 261 2623
+find_max
+at 391
+at 28
