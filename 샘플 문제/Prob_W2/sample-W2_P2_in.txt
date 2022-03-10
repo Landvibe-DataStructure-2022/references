@@ -1,0 +1,101 @@
+100
+Delete 2366 
+Delete 3574 
+Append 3872
+Append 6917
+Delete 1 
+Append 2794
+Max
+Print
+Print_reverse
+Print_reverse
+Print
+Max
+Delete 1 
+Print_reverse
+Delete 1 
+Append 2351
+Delete 1 
+Delete 8631 
+Append 722
+Append 4118
+Max
+Print_reverse
+Max
+Print_reverse
+Append 621
+Print
+Delete 1 
+Delete 1 
+Delete 1 
+Print
+Print
+Delete 6038 
+Print_reverse
+Append 7976
+Print_reverse
+Delete 1 
+Append 817
+Delete 1 
+Print
+Append 115
+Append 4396
+Print
+Print_reverse
+Print
+Max
+Delete 1 
+Append 48
+Delete 1 
+Max
+Delete 1 
+Max
+Append 1536
+Print_reverse
+Append 3504
+Append 8858
+Append 758
+Max
+Print_reverse
+Print
+Delete 3 
+Append 189
+Delete 1 
+Print_reverse
+Print_reverse
+Append 4696
+Append 9617
+Print_reverse
+Max
+Max
+Max
+Append 9510
+Print_reverse
+Print_reverse
+Delete 1 
+Print
+Delete 2 
+Delete 4 
+Max
+Delete 3 
+Print
+Delete 1 
+Print_reverse
+Max
+Print_reverse
+Max
+Print_reverse
+Max
+Max
+Append 6797
+Delete 2 
+Delete 1 
+Print
+Append 6770
+Print_reverse
+Max
+Print_reverse
+Append 4741
+Delete 1 
+Print
+Print

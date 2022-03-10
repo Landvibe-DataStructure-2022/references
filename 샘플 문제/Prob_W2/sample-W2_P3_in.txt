@@ -1,0 +1,101 @@
+100
+Insert 9933 8289
+Insert 5485 8239
+Insert 4399 3063
+Print
+Min
+Delete 5193 
+Print
+Insert 5291 6006
+Delete 1162 
+Print
+Print
+Insert 5532 9614
+Print
+Min
+Min
+Min
+Insert 1692 3951
+Min
+Delete 1101 
+Delete 2387 
+Min
+Append 8240
+Print
+Insert 1 2530
+Print
+Append 6534
+Min
+Delete 1 
+Delete 1 
+Insert 9403 428
+Delete 5727 
+Append 1312
+Print
+Print
+Append 3707
+Insert 1 7608
+Min
+Print
+Append 7198
+Delete 2 
+Min
+Min
+Print
+Delete 2 
+Print
+Delete 1 
+Insert 5344 3509
+Min
+Append 6651
+Delete 1 
+Insert 7141 336
+Append 1248
+Append 9710
+Min
+Delete 1 
+Print
+Print
+Append 573
+Insert 2 883
+Append 2838
+Min
+Print
+Min
+Min
+Min
+Print
+Print
+Min
+Insert 1 3619
+Delete 1 
+Min
+Min
+Delete 2 
+Delete 1 
+Delete 1156 
+Min
+Delete 2319 
+Append 5915
+Delete 1 
+Insert 6422 8564
+Print
+Append 1278
+Print
+Append 7511
+Insert 2 5832
+Print
+Delete 1 
+Print
+Print
+Print
+Print
+Insert 1 2304
+Min
+Insert 1 864
+Delete 1 
+Delete 50 
+Insert 1133 3991
+Append 2913
+Print
+Append 7724

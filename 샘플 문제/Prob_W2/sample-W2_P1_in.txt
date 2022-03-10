@@ -1,0 +1,101 @@
+100
+Delete 5257 
+Delete 7211 
+Append 1538
+Sum
+Print
+Delete 1 
+Print
+Insert 7091 350
+Delete 7019 
+Sum
+Insert 3136 3597
+Sum
+Append 4342
+Append 5234
+Sum
+Print
+Delete 1 
+Append 8336
+Insert 1 161
+Append 2448
+Delete 2 
+Print
+Append 2593
+Delete 3 
+Print
+Print
+Delete 2 
+Print
+Insert 1 9531
+Append 5068
+Append 831
+Delete 2 
+Print
+Append 5676
+Insert 2 2307
+Sum
+Append 795
+Insert 1 3042
+Sum
+Delete 3 
+Delete 2 
+Print
+Sum
+Append 8218
+Print
+Append 6006
+Delete 3 
+Append 4004
+Sum
+Insert 1 6468
+Append 5421
+Sum
+Print
+Append 9357
+Print
+Delete 2 
+Append 8754
+Insert 2 7438
+Print
+Sum
+Append 111
+Delete 3 
+Print
+Insert 4 7338
+Insert 2 7489
+Print
+Print
+Print
+Insert 4 6582
+Insert 3 571
+Print
+Print
+Insert 4 5965
+Append 1912
+Append 7268
+Append 3935
+Insert 8 512
+Append 7386
+Print
+Delete 2 
+Delete 4 
+Print
+Print
+Insert 3 2956
+Sum
+Insert 1 4480
+Print
+Delete 3 
+Insert 4 963
+Print
+Print
+Append 4717
+Delete 4 
+Append 3338
+Sum
+Append 1358
+Insert 4 9823
+Append 2734
+Delete 5 
+Print
