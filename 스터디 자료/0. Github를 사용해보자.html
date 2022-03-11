@@ -1,0 +1,692 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>0. Github를 사용해보자</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+}
+
+.simple-table-header {
+	background: rgb(247, 246, 243);
+	color: black;
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="5fef448a-ad4d-49b6-8841-34a211a06a7c" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="https://blog.kakaocdn.net/dn/euksHz/btrkikzsvnn/p5AdNUCmxGuZbnu4Vq98Y0/img.webp"/></div><h1 class="page-title">0. Github를 사용해보자</h1></header><div class="page-body"><h2 id="321d5c44-541d-4ceb-87d1-6483fa10c335" class="">목차</h2><ul id="b4a494b3-51e4-4e96-9056-d1afe334e68d" class="bulleted-list"><li style="list-style-type:disc">Git, Github가 뭔지 알아보기</li></ul><ul id="96242536-4124-41e8-bd68-119be34c4f80" class="bulleted-list"><li style="list-style-type:disc">SourceTree 설치하기</li></ul><ul id="b0de8d4b-ffd3-44a3-9722-272d0eaf447a" class="bulleted-list"><li style="list-style-type:disc">SourceTree와 Github 연동하기</li></ul><ul id="1e5f6a50-35ab-47da-95c0-f35aff1269c9" class="bulleted-list"><li style="list-style-type:disc">clone 받아보기</li></ul><ul id="73f7d7b2-00d9-4f85-9f85-4a40166f2a8f" class="bulleted-list"><li style="list-style-type:disc">branch 생성해보기</li></ul><ul id="b7b28673-1f87-45ad-8da1-0c25e7b116aa" class="bulleted-list"><li style="list-style-type:disc">commit 해보기</li></ul><ul id="2e0db840-e029-4c48-bc9b-73d6af76f7c8" class="bulleted-list"><li style="list-style-type:disc">push 해보기</li></ul><ul id="42898a74-6cfd-4a76-936a-8e9089a971c6" class="bulleted-list"><li style="list-style-type:disc">pull request 해보기</li></ul><ul id="c71e9d44-7468-4a43-a25a-07a609d6cfa9" class="bulleted-list"><li style="list-style-type:disc">merge 해보기</li></ul><ul id="c1515c60-fedd-44a5-9cdb-ceb1eabe3a2d" class="bulleted-list"><li style="list-style-type:disc">pull 받아보기</li></ul><p id="e33a11fc-7550-4a62-9d44-0f58574e0f6a" class="">
+</p><h2 id="b132f095-db5c-4ba0-963f-174b9f884469" class="">Github란?</h2><ul id="8fe3a851-349e-47e3-a002-d4a8c5e986c9" class="bulleted-list"><li style="list-style-type:disc">Git이라는 게 있다. 이게 뭐냐면 ...<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f7098cdb-98c8-4a58-9f5c-5c89e3e0a199"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">아직까지는 코딩으로 협업을 해본 경험이 거의(?) 없겠지만, 타인과 협업을 하다 보면 프로젝트의 진행 상황을 <code>공유</code> 해야 할 상황이 생긴다. 가령, A와 B와 C라는 세 사람이 협업을 하는 상황이라고 생각해보자. A는 a.cpp 파일을, B는 b.cpp 파일을, C는 c.cpp 파일을 만들어 나중에 하나로 합치기로 했다고 해보자.
+모두가 정말 자기가 맡은 파일만 건드린다면, 사실 우리는 각각의 cpp 파일을 메일로 받아서 ... 하나의 프로젝트에 붙여넣기해도 될 것이다. 하지만 현실은 그렇게 녹록하지 않다 ... A가 코드를 짜다보면 B의 코드가 필요할 수도 있고, C가 코드를 짜다보면 A의 코드를 일부 수정해야 할 때도 있다. 이럴 경우 매번 메일로 파일을 공유하는 것은 너무 번거롭지 않을까?
+<code>Git</code> 은 이런 상황에서 매우 유용한 도구이다. 팀원들의 개발 진행 상황을 한 곳에서(여기까지는 깊게 몰라도 괜찮다!) 관리해주는 시스템이 바로 Git이다. 매번 소스코드를 서로 주고받을 필요 없이, Git을 사용하면 하나의 프로젝트, 같은 파일을 여러 사람이 동시에 접근해 제각각 작업을 하고, 작업을 마치면 자신이 맡은 결과물을 다시 프로젝트에 합치며 협업을 이어나갈 수 있다.
+개인적인 경험으로는 개발할 때 정말 많이 쓴다. 거의 없어서는 안 될 정도다. 그런데 학교에서는 Git을 잘 안 알려주더라 ... 그래서 내가 알려주고 싶었다.</div></figure></li></ul><ul id="e8c701d6-cd2e-4e7a-9883-6ec8a6a1f4cd" class="bulleted-list"><li style="list-style-type:disc">Git이 뭔지는 알겠는데 ... Github랑 Git이 달라?<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="c9c28e3d-c936-4327-a86e-52987a00e5e9"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Git은 협업을 편하게 해주는 도구라고 말했다. <code>Github</code> 는 이런 Git을 지원해주는 하나의 웹 서비스다. 정말정말 쉽게 설명하면 ... 스트리밍이 Git이고 넷플릭스가 Github 같달까? 우리는 이번 스터디에서 Github라는 사이트를 활용해서 Git을 배워볼 것이다.</div></figure></li></ul><p id="f5c2042a-d3f2-41da-be42-a1bc9998b4e3" class="">
+</p><h2 id="9757326b-7aee-49aa-aec8-6c436e45395d" class="">SourceTree 설치하기</h2><ul id="265b73f1-6c68-470f-85e9-ca9777c85d69" class="bulleted-list"><li style="list-style-type:disc">SourceTree는 또 뭐에요?<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="562b67f3-c38f-4867-aa33-ebec148b6643"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Git과 Github를 좀 더 쉽게 사용할 수 있게 해주는 프로그램</div></figure></li></ul><ul id="87f0cc29-27c8-4b02-9d78-7dd3089ea677" class="toggle"><li><details open=""><summary>SourceTree 없어도 Git과 Github를 사용할 수 있긴 한데 ...</summary><p id="b43906f6-bee5-47c8-bbca-67570a17307d" class="">&lt;img width=&quot;682&quot; alt=&quot;image&quot; src=&quot;<a href="https://user-images.githubusercontent.com/81508084/157603335-5a064ad3-fc7e-4af2-b6b7-4d8065e9c3da.png">https://user-images.githubusercontent.com/81508084/157603335-5a064ad3-fc7e-4af2-b6b7-4d8065e9c3da.png</a>&quot;&gt;</p><figure id="abf0ef5d-b913-45f6-a78a-c5bcc317e572" class="image"><a href="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled.png"><img style="width:1364px" src="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled.png"/></a></figure><p id="827687c1-fb06-4da4-ae33-d5db5bc06c43" class="">좀 개발자스러울 수 있지만, 이렇게 검은 배경에 알 수 없는 명령어들을 치면서 Git과 Github를 사용할 수 있긴 하다. 하지만 이건 좀 러닝커브가 있다. 쉽게 말하면, 배우기가 조금 어렵다. SourceTree는 이런 칙칙한 느낌이 아니라 마우스 몇 번 딸깍거림으로써 Git과 Github를 사용할 수 있게 해주는 프로그램이다.</p></details></li></ul><p id="efd89d3d-d8da-4d26-a615-852c401134a2" class="">
+</p><ul id="1afc0193-9609-447c-a5c8-72846f84bafc" class="bulleted-list"><li style="list-style-type:disc"><strong>SourceTree 설치하기</strong><p id="75646e2e-69c9-4cf8-9e54-6762f21eeb4c" class=""><strong>1~5번까지는 내가 쓴 글보다는 다른 사람 블로그 보는 게 더 편할 것 같다 ... 왜냐면 ... 난 이미 설치했기 때문에 ... 아래 블로그 참고하면서 내 글도 참고해서 따라가보자 !!</strong></p><figure id="40bd8c8f-9711-4476-9d21-601c616117d7"><a href="https://velog.io/@wijoonwu/%EB%A7%A5%EC%97%90%EC%84%9C-Sourcetree-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">맥에서 Sourcetree 설치하기</div><div class="bookmark-description">Sourctree 사이트에 접속합니다. Download for Mac OS X 를 클릭합니다. 설치를 위해 동의를 구하는 창이 나오면 Download 를 클릭합니다. 설치 경로를 설정하고 저장을 클릭합니다. 설치가 완료된 프로그램을 더블클릭하여 실행 합니다.보안</div></div><div class="bookmark-href"><img src="https://static.velog.io/favicon.ico" class="icon bookmark-icon"/>https://velog.io/@wijoonwu/%EB%A7%A5%EC%97%90%EC%84%9C-Sourcetree-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0</div></div><img src="https://media.vlpt.us/images/wijoonwu/post/74149a76-479b-4bb8-b4f3-631d0f572ff4/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-11-10%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2011.17.33.png?w=768" class="bookmark-image"/></a></figure><ol type="1" id="73e60d33-a1b0-4062-a13d-c027ebb04205" class="numbered-list" start="1"><li>아래 링크에 접속해보자.</li></ol><figure id="a8042524-2c74-4d29-9344-ea518d6c7e3b"><a href="https://www.sourcetreeapp.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Sourcetree | Free Git GUI for Mac and Windows</div><div class="bookmark-description">As our new Bitbucket space station administrator, you need to be organized. When you make files for your space station, you&#x27;ll want to keep them in one place and shareable with teammates, no matter where they are in the universe. With Bitbucket, that means adding everything to a repository.</div></div><div class="bookmark-href"><img src="https://wac-cdn.atlassian.com/assets/img/favicons/sourcetree/favicon.ico" class="icon bookmark-icon"/>https://www.sourcetreeapp.com/</div></div><img src="https://wac-cdn.atlassian.com/dam/jcr:51aa63f9-8e33-4177-8ef9-54b4bdb09a69/sourcetree_rgb_darkblue_atlassian_1200x630.png" class="bookmark-image"/></a></figure><ol type="1" id="db68fe36-668c-4db3-bf62-9d5ffb87ada7" class="numbered-list" start="2"><li>나는 맥북이라서 Mac용을 설치하라고 바로 뜨는데, 여기서 각자 자신의 환경에 맞는 버전을 설치하자.
+윈도우면 for Windows, 맥북이면 for Mac OS를 누르면 된다.<figure id="32a73a4e-5a89-4f89-88c0-5bdfe8f02f9b" class="image"><a href="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%201.png"><img style="width:2390px" src="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%201.png"/></a></figure></li></ol><ol type="1" id="9fdff123-d9a3-44c7-b1b6-2aee7919e0a1" class="numbered-list" start="3"><li>뭐 동의 해달라는 말이 나오는데, 대충 Agree를 누르면 설치된다.</li></ol><ol type="1" id="11ceb4ad-2d67-4248-9c5f-62455a9eed43" class="numbered-list" start="4"><li>다운로드받은 경로에 가면 SourceTree가 있다. 이걸 열어주자</li></ol><ol type="1" id="55a5aec0-c805-43c7-bfe7-126bd19e595d" class="numbered-list" start="5"><li>SourceTree가 열렸다 !<figure id="aab4b1b5-608f-4cdc-9c1d-01553cb9461f" class="image"><a href="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%202.png"><img style="width:3104px" src="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%202.png"/></a></figure></li></ol></li></ul><p id="48b64ab2-5ae5-4336-b887-5028992c6775" class="">
+</p><h2 id="b1a9e490-4ab4-4135-8cf9-e86e29ba71db" class="">SourceTree와 Github 연동하기</h2><ul id="8fadb4f1-7bf2-4913-ab2d-255ba34aab26" class="bulleted-list"><li style="list-style-type:disc">SourceTree를 설치했다고 끝난 게 아니다. 왜냐하면, SourceTree와 Github를 연동시켜야 한다. 이건 마치 ... 아이폰을 샀다고 바로 앱스토어에서 카카오톡을 다운받을 수 없는 것이랑 같은 원리? 우리도 아이폰을 사면 애플 계정으로 로그인을 해서 연동을 시켜야 서비스를 이용할 수 있는 것처럼!</li></ul><p id="83954f95-7632-4244-a0bc-5481cea2f169" class="">
+</p><ul id="45c838cd-9fe9-4441-b3a3-e98709ad17a4" class="bulleted-list"><li style="list-style-type:disc"><strong>SourceTree와 Github 연동하기</strong><ol type="1" id="f868e8f5-9e6e-4bf3-b77a-b77ce8f4e475" class="numbered-list" start="1"><li>맥 → 좌측 상단 애플 로고 옆 SourceTree 클릭 → 설정 → 계정
+윈도우 → 좌측 상단 도구 클릭 → 옵션 → 인증</li></ol><ol type="1" id="2ce1e093-ca72-4403-aa26-9db6782d4ede" class="numbered-list" start="2"><li>추가 클릭</li></ol><ol type="1" id="bc48d9b4-58c7-4eb1-a669-ff202ef24815" class="numbered-list" start="3"><li>맥 → 호스트 : Github 클릭, 계정 연결 클릭
+윈도우 → 호스팅 서비스 : Github 클릭, OAuth 토큰 새로고침 클릭</li></ol><ol type="1" id="c78c0af1-4802-4bbb-9570-d3ed23119242" class="numbered-list" start="4"><li>Github 사이트로 연결될 것이다. 로그인하라고 하면 로그인하자. 3번 과정을 하기 전에 미리 로그인해두면 더 편할지도?</li></ol><ol type="1" id="d70361ab-38a1-4466-b24a-c32f2ebfd69a" class="numbered-list" start="5"><li>인증 절차를 알아서 거치면, 사용자명이 내 Github 아이디로 바뀌어있다. 확인 또는 저장(OS마다 다르다)을 누르자.</li></ol><ol type="1" id="a4121c66-bd67-4fab-a32d-89e1f586440a" class="numbered-list" start="6"><li>끝</li></ol></li></ul><p id="2190e19d-8cfe-4320-bbbb-934d2123fa2f" class="">
+</p><h2 id="aa25fb41-0cbc-4037-a860-d0766b8836a7" class="">clone 받아보기</h2><ul id="8e394dd2-ce3a-416b-bf3b-521b83df2851" class="bulleted-list"><li style="list-style-type:disc">clone을 받는다는 말이란, Github 상에 있는 프로젝트를 복제해서 내 PC로 가져오는 것을 말한다. clone을 받아야 해당 프로젝트에 나도 참여(?)할 수 있다!</li></ul><p id="9fafa485-4cf5-46b9-aa68-e287ccef5558" class="">
+</p><ul id="ccce96b0-0a51-4438-8307-92bf7d058ca5" class="bulleted-list"><li style="list-style-type:disc"><strong>clone 받아보기</strong><ol type="1" id="4a4b51cd-cfd9-4646-9229-f470c9940cd7" class="numbered-list" start="1"><li>새로 만들기 → URL에서 복제 클릭<figure id="72ca3168-bcc3-4c71-81fa-7ebc77c6e3f6" class="image"><a href="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%203.png"><img style="width:2880px" src="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%203.png"/></a></figure></li></ol><ol type="1" id="23bca056-fbc0-4cf3-bff5-a29bbb251917" class="numbered-list" start="2"><li>원본 URL은, Github에서 우리가 가져올 프로젝트가 있는 주소이다. 목적지 경로는, 우리가 가져온 프로젝트를 우리 컴퓨터 어디에 저장할 것인지를 의미한다. 이름은 우리 컴퓨터에 만들어질 폴더 이름이다. 아래 주소에서, 각자의 레포지토리(저장소라는 뜻이다)에 들어가서 URL을 복사해올 것이다. <figure id="7a0e12c7-f96a-4be8-82ab-a2d62e5ceed2"><a href="https://github.com/Landvibe-DataStructure-2022" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Landvibe-DataStructure-2022</div><div class="bookmark-description">땅울림 자료구조 스터디 2022. Landvibe-DataStructure-2022 has one repository available. Follow their code on GitHub.</div></div><div class="bookmark-href"><img src="https://github.com/favicon.ico" class="icon bookmark-icon"/>https://github.com/Landvibe-DataStructure-2022</div></div><img src="https://avatars.githubusercontent.com/u/101272702?s=280&amp;v=4" class="bookmark-image"/></a></figure><p id="5582ac81-c3d0-4856-920b-7e216cb98943" class="">각자의 이름이 적힌 레포지토리에서 초록색 Code 버튼을 누르면 무슨 주소가 솰라솰라 나온다. HTTPS를 클릭하고, 복사 버튼을 눌러주자.</p><figure id="8c3c38fe-825f-4f8f-a947-00750de69710" class="image"><a href="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%204.png"><img style="width:3104px" src="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%204.png"/></a></figure><p id="a58ae84e-c4ca-42eb-9f2e-2a025a33795c" class="">URL이 복사되었을 것이다. 그걸 SourceTree의 원본 URL 탭에 붙여넣어보자. 나머지는 알아서 채워진다! </p><figure id="153895d6-c703-4aa8-844c-e0dd2c0bc4a7" class="image"><a href="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%205.png"><img style="width:3104px" src="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%205.png"/></a></figure><p id="201c34d7-e160-40ab-8664-6c24e61a6589" class="">완료를 눌러주자.</p><p id="b63e8cb1-a079-49d2-a4a5-f39a754f0ab2" class=""><code>목적지 경로</code> 를 어디로 설정했는지 잘 기억해야 한다.
+참고로, 해당 위치에 해당 이름으로 이미 폴더가 존재하면 안 된다.</p></li></ol><ol type="1" id="45f98508-4784-4299-87d7-7d9bb8f0eacd" class="numbered-list" start="3"><li>아래처럼 뜨면 성공이다.<figure id="adcd4a6e-f6af-4f3a-9408-ab943b45e0f3" class="image"><a href="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%206.png"><img style="width:3104px" src="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%206.png"/></a></figure></li></ol></li></ul><p id="463503d2-a821-45ed-9764-2dd35a602536" class="">
+</p><h2 id="b136458a-2b09-451b-81cb-5afbbd21e8aa" class="">branch 생성해보기</h2><ul id="94caa82b-99f6-431f-b1d1-7f3eca2514b1" class="bulleted-list"><li style="list-style-type:disc">branch를 생성한다는 말은, (여기부터 조금 어려울 수 있는데) 영어론 가지를 뻗는다는 말인데, 복사본을 만들어둔다는 개념과 비슷하다. 우리가 clone 받은 프로젝트에서 따로 branch를 생성하지 않고 작업하고 (추후 설명할) 커밋과 푸시를 하게 되면, 원본 파일을 바로 수정하는 것이기 때문에 조금 위험(?)하다. 예를 들면, 우리가 진짜 진짜 중요한 작업을 할 때, 사본을 하나 백업해두는 것과 비슷한 맥락이다. </li></ul><ul id="249c3906-489f-4400-8829-a68bc25a7172" class="bulleted-list"><li style="list-style-type:disc">branch를 생성하고, 생성한 branch에서 작업을 하고, 작업을 했으면 (전과 비교했을 때) 수정사항이 생겼을 것이다. 우리는 추후 이 수정사항을 commit과 push, 그리고 pull request와 merge라는 일련의 과정으로 수정사항을 원본에 반영하게 된다.</li></ul><ul id="92e438cb-b1ef-45c9-9884-0623ab50f1c1" class="bulleted-list"><li style="list-style-type:disc">즉, 쉽게 설명하면 협업의 과정은 branch를 생성하고, commit을 해서 임시로 저장한 뒤, push해서 Github 웹사이트 상에 저장하고, pull request를 통해 수정사항을 반영하고싶다고 요청하고, merge를 해서 수정사항을 원본에 반영하고, pull을 통해 수정사항이 반영된 원본을 가져오는 것이다. 이 과정의 무한 반복이다.</li></ul><p id="51b3d5e8-70e1-40a1-905c-52e58b4f450d" class="">
+</p><ul id="46a7d02a-7d9a-4e53-89ae-04e2353b4c4d" class="bulleted-list"><li style="list-style-type:disc"><strong>branch 생성해보기</strong><ol type="1" id="999f79ea-6b9d-4fa5-ad97-d14b593c5aa4" class="numbered-list" start="1"><li>우측 상단에 <code>브랜치</code> 클릭</li></ol><ol type="1" id="43a7c16a-7df0-4c7b-b185-21c0d027d48e" class="numbered-list" start="2"><li>우리의 과제는 주차별로 나올 것이니까, 주차별로 weekN 형태로 브랜치를 만들어보자. 3월 10일 기준, 2주차니까 week2로 브랜치를 생성하자.<figure id="3583ca70-f6f9-4159-94d2-3919ce41c67e" class="image"><a href="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%207.png"><img style="width:3104px" src="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%207.png"/></a></figure></li></ol><ol type="1" id="31cbf271-0969-42b9-8dab-c5082ddc407e" class="numbered-list" start="3"><li>끝</li></ol><p id="953b13aa-0e98-432b-a12c-197c992e1102" class="">
+</p></li></ul><h2 id="26798aa8-8045-41f1-b371-7782a0e892eb" class="">commit 해보기</h2><ul id="733127ab-924a-4b32-8aae-c8e7eb0b411c" class="bulleted-list"><li style="list-style-type:disc">commit이란, 우리가 작업해서 생긴 수정사항을 임시로 저장하는 느낌이다. 문서작업을 하다가 Ctrl+S를 누르는 것과 비슷하다.</li></ul><ul id="d953d23a-0956-45ec-8995-68d3eed95301" class="bulleted-list"><li style="list-style-type:disc">commit을 하려면 일단 수정사항이 생겨야 한다. 한 번 해보자.</li></ul><ul id="1d98d3ff-adf4-41c5-b096-c25a79509ace" class="bulleted-list"><li style="list-style-type:disc">일단 과제를 풀자. 그리고 그 cpp 파일을 남겨두자.</li></ul><p id="4d1672ff-4437-4153-95f8-e70e8d712a70" class="">
+</p><ul id="76e14b7f-30ba-4939-882d-a426000d0aca" class="bulleted-list"><li style="list-style-type:disc"><strong>commit 해보기</strong><ol type="1" id="554b4b27-e962-4fd2-8102-53faf3f1ba87" class="numbered-list" start="1"><li>우리가 clone을 받아올 때 <code>목적지 경로</code> 탭에 해당하는 위치를 열어보자.
+나는 이미 뭔가를 Github에 올려놔서, 뭐가 있지만 여러분들은 아무것도 없을거다. 주차마다 폴더 하나씩 만들어두자. week1, week2, week3, ... 처럼(지금 당장 다 만들 필요는 없고, 해당 주차마다 폴더 만들면 된다.) 만들고, 해당하는 주차에 들어가보자.</li></ol><figure id="ab8a62fe-65c3-47b2-8ea6-4ad43453e6d2" class="image"><a href="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%208.png"><img style="width:2064px" src="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%208.png"/></a></figure><ol type="1" id="263a865b-8c0f-4e23-a111-b010776f7617" class="numbered-list" start="2"><li>나는 2주차 과제를 Github에 올리고 싶다. 그럼 week2에 들어간다.<p id="905aa158-074a-41b7-975c-f707731078f2" class="">그리고 내가 과제로 푼 cpp 파일을 복사해서, 방금 들어간 week2 폴더에 붙여넣어보자.</p><p id="5022685b-d2a7-43ef-9b89-3bdf160e5857" class="">그럼 수정사항이 생겼다. (원래 뭐 없었는데 뭐가 추가됐네? 하고 Git이 알아서 반응한다. 몰라도 된다.)</p></li></ol><figure id="f4db5564-fcda-4e54-a27d-d1226de410e2" class="image"><a href="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%209.png"><img style="width:2064px" src="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%209.png"/></a></figure><ol type="1" id="a576a691-accf-4238-b84f-1b61894b1869" class="numbered-list" start="3"><li>그리고 SourceTree로 돌아가보자. 뭔가가 생겼다.<figure id="9c9eb101-52e0-4489-b275-5d0487926846" class="image"><a href="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%2010.png"><img style="width:3104px" src="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%2010.png"/></a></figure></li></ol><ol type="1" id="0be6def2-617d-4efc-b43c-e5c7acacd98c" class="numbered-list" start="4"><li>내가 저장하고 싶은 파일만 체크해보자. 나는 다 체크할 것이다. 체크하고, 우측 상단에 <code>커밋</code> 버튼을 눌러보자.
+만약 아래처럼 뭐가 뜬다면, 이름엔 내 Github 이름(ID 말고 이름!)과 Github에 가입할 때 쓴 이메일 주소를 넣자. 나는 내 Github 이름 Seunghyeon Han과 내 Github 이메일 hansh0101@naver.com을 넣었다.</li></ol><figure id="7bcdca61-0d77-4cb4-adec-8564a260d310" class="image"><a href="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%2011.png"><img style="width:3104px" src="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%2011.png"/></a></figure><ol type="1" id="ad5ee2ce-0a04-489e-b957-e4e8600d3e2e" class="numbered-list" start="5"><li>커밋을 누르면, 아래 하단에 커밋 메시지라는 것을 쓸 수 있다. 이건 뭐냐면, 내가 뭘 수정했는지 간단하게 기록하면 된다. 나는 [샘플 코드 - week2] 라고 작성했다.</li></ol><figure id="8000c343-163c-4556-9f8e-bd6b90215fed" class="image"><a href="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%2012.png"><img style="width:3104px" src="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%2012.png"/></a></figure><ol type="1" id="9e7b79fd-b84f-4389-aba7-9315dc74761e" class="numbered-list" start="6"><li>우측 하단 파란색 커밋 버튼을 누르자. 끝</li></ol></li></ul><p id="282571ab-e9df-409f-a9de-8d6ce34af38f" class="">
+</p><h2 id="20b4f034-a690-48b7-a554-6faf99961028" class="">push 해보기</h2><ul id="8682587a-8a30-4f95-b581-34bb7e3c7827" class="bulleted-list"><li style="list-style-type:disc">push란, 우리가 commit을 통해 임시로 저장한 수정사항을 Github 웹사이트에 올리는 것을 말한다.</li></ul><ul id="3a78f504-797e-48bb-919d-460c7961f219" class="bulleted-list"><li style="list-style-type:disc">당연히 commit한 내역이 없으면 push할 수 없다.</li></ul><ul id="0a210925-e9fd-4333-b259-c1d6c0fc1eb3" class="bulleted-list"><li style="list-style-type:disc">아까 커밋을 했다면, 이번엔 push해보자.</li></ul><p id="7e236aac-5aa3-4814-a8d6-9e8c8b41e1b4" class="">
+</p><ul id="5ac27f3b-dfcc-48fa-a6c7-240148be2707" class="bulleted-list"><li style="list-style-type:disc"><strong>push 해보기</strong><ol type="1" id="d31ca728-cd6a-4cba-9b89-a3099a668c51" class="numbered-list" start="1"><li>아까 commit을 끝내고, 우측 상단의 푸시를 눌러보자. 그럼 뭘 푸시할거냐고 물어본다. 우리는 살포시 아까 만든 브랜치인 week2만 체크하자.<figure id="d2fe8750-fc1a-4822-a3ab-86ab7aaa08d1" class="image"><a href="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%2013.png"><img style="width:3104px" src="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%2013.png"/></a></figure></li></ol><ol type="1" id="1d500234-d2ed-4914-8c77-1072fa978844" class="numbered-list" start="2"><li>뭔가 로그인하라고 뜬다면 ... 잠깐 이걸 접고 ... 맨 밑으로 스크롤을 내려보자.</li></ol><ol type="1" id="e9626c22-23c8-4e27-9ac7-36e18cbd12ef" class="numbered-list" start="3"><li>맨 밑에 가서 읽다가 여기로 돌아왔으면, 이제 Github의 땅울림 자료구조 Organization(그냥 조직이라고 생각하면 된다)에서 각자의 이름으로 된 레포지토리(아까 저장소 같은거라고 했다)에 들어가보자. week2가 방금 막 push됐단다. 궁금하면 저기 main이라고 적힌 친구를 눌러서 week2를 켜보자. 그럼 내 수정사항이 반영되어 있을 것이다.<figure id="b5ab76be-a8eb-4403-886f-896bf4f1caae" class="image"><a href="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%2014.png"><img style="width:3104px" src="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%2014.png"/></a></figure><p id="9210a777-7690-4588-81b4-bfcadda99062" class="">
+</p></li></ol></li></ul><h2 id="e3da4c52-83af-4077-96b0-c57e5860aeb8" class="">pull request 해보기</h2><ul id="98e2b150-25e8-49c7-8ead-0c6e76ce2a97" class="bulleted-list"><li style="list-style-type:disc">아니, main은 도대체 뭐지? 싶을 수 있다. 난 week2를 푸시했는데 저 main이 뭘까? main은 보통 협업 시 가장 최신 상태로(수정사항이 다 반영된) 있는 원본과 같은 개념이다. 즉, 우리 원본(main) 브랜치에는 내 수정사항이 아직 반영되지 않았다는 것이다.</li></ul><ul id="efef95eb-2e3f-4a14-aef1-6445f3d9c7cb" class="bulleted-list"><li style="list-style-type:disc">우리의 수정사항을 main 브랜치에 반영해야 다른 사람들도 main 브랜치에서 내 수정사항을 확인할 수 있다. 우리의 수정사항을 main 브랜치에 합치고 싶을 때, pull request라는 것을 이용한다.</li></ul><ul id="36478889-030b-4baa-99e6-4666ccc18d4c" class="bulleted-list"><li style="list-style-type:disc">쉽게 말하면, “나 수정했으니까 내 수정사항을 main에 합쳐줘 ~ “ 하고 요청(request)하는 것이다.</li></ul><p id="9c249857-ca64-4b68-83c3-de699dc9b2b7" class="">
+</p><ul id="edeb3009-5d78-4526-abb8-c7ddcf29cf77" class="bulleted-list"><li style="list-style-type:disc"><strong>pull request 해보기</strong><ol type="1" id="12b110a3-c6a6-47e7-85f1-de68c2bf5c0e" class="numbered-list" start="1"><li>이건 SourceTree에서 하지 않는다. 바로 위에 있는 사진에서, Compare &amp; pull request라고 적힌 초록 버튼을 누르자. 눌렀으면 밑에 안 읽고 2번으로 가도 된다.
+만약 그 초록 버튼이 안 뜬다면, 상단에 있는 여러 탭 중에서 Pull requests를 누르고 New Pull Request라고 적힌 초록 버튼을 눌러보자. 그럼 base와 compare라고 적힌 버튼이 나온다. 
+compare는 내 수정사항이 반영되어있는 브랜치, 즉 지금까지의 예시에서는 week2이다. base는 내 수정사항을 반영시키고싶은 브랜치, 즉 지금까지의 예시에서는 main이다. base와 compare 버튼을 눌러 각각 맞게 설정해주자. 그리고 아래 사진처럼 뜨면, Create pull request라고 적힌 초록 버튼을 누르자.<figure id="a5d5c090-bed1-4be3-a61e-9572cea2f197" class="image"><a href="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%2015.png"><img style="width:3104px" src="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%2015.png"/></a></figure></li></ol><ol type="1" id="800901b5-d099-4e01-add3-a4ea8421f6af" class="numbered-list" start="2"><li>1번을 마치면, 아래와 같은 화면이 나온다. Leave a comment라고 적힌 부분엔, 내가 이번에 뭘 했는데, 그래서 수정사항이 이렇고, 이런 내용을 작성해준다. 나는 week2 P1, P2 구현완료 라고 작성했다. 작성이 끝나면, Create pull request를 누른다.<figure id="b90facc8-e032-4593-9b1e-b66cb44c7b37" class="image"><a href="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%2016.png"><img style="width:3104px" src="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%2016.png"/></a></figure></li></ol><ol type="1" id="09335a62-c390-4e47-9cd5-bf7ae57fe2a9" class="numbered-list" start="3"><li>Create pull request를 누르면, 아래와 같은 화면이 나온다.<figure id="25e35db6-2f42-44ed-b28b-38ed93d5bb55" class="image"><a href="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%2017.png"><img style="width:3104px" src="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%2017.png"/></a></figure><p id="41a782df-faa3-432d-a2f8-ffd637110a32" class="">난 아래에 보면 Merge pull request라는 버튼이 보인다. 만약 저 초록색이 아니라 뭔가 건드리면 큰일 날 것처럼 빨간색의 글씨가 있다면, 나한테 말해주면 도와주겠다!! 아무튼 Create pull request를 누르는 것까지가 pull request 해보기의 끝이다.</p><p id="a159e78f-0ff2-43f7-854c-3b790a90b95e" class="">
+</p></li></ol></li></ul><h2 id="6f7714ff-47f4-4e22-8ca9-c39a3b9a0896" class="">Merge 해보기</h2><ul id="4134a8fc-2749-4e09-849d-7379efab2b98" class="bulleted-list"><li style="list-style-type:disc">merge란, pull request로 우리가 “우리의 수정사항을 main에 합치고싶어!” 라고 요청한 것을 ㅇㅋ 하고 합치는 작업이다.</li></ul><ul id="c9b35bd5-33dc-4f0a-a82a-693a62f6729e" class="bulleted-list"><li style="list-style-type:disc">보통은 위의 사진에서 초록색 Merge pull request 버튼을 누르면 무난하게 가능하지만, 아닌 경우도 있다. 그 때는 나한테 말하면 알려주겠다. 그러니까 초록색 Merge pull request 버튼을 누르면 merge가 끝난다.</li></ul><p id="4b207b05-7987-41d7-a7d6-f27a2ae6ac80" class="">
+</p><h2 id="dd6aa698-cd1c-4769-9f09-04924e6a146a" class="">Pull 받아오기</h2><ul id="1905344f-812d-433a-8d94-2adfa6d750c7" class="bulleted-list"><li style="list-style-type:disc">pull이란, Github 웹사이트에 있는 프로젝트를 가져오는 행위를 말한다.</li></ul><ul id="9e838cc8-4f5a-4d34-a409-8fd706ab17e8" class="bulleted-list"><li style="list-style-type:disc">아까 week2 브랜치를 merge했으니, SourceTree로 다시 돌아가서 좌측 브랜치 탭에 있는 main을 더블클릭 해보자.</li></ul><ul id="97650201-ecb0-48e0-821f-e159b6cf975e" class="bulleted-list"><li style="list-style-type:disc">우리는 웹사이트에서 merge 과정을 진행했다. 즉, 우리가 수정사항을 main에 합친 건 웹사이트 상에서 한 것이기 때문에, 우리의 PC에서는 우리가 수정사항을 main에 합친게 반영이 안 되어있다. 허걱쓰 ~</li></ul><ul id="13965106-5a0c-40f1-a762-9733da5d357a" class="bulleted-list"><li style="list-style-type:disc">이럴 때는, pull을 통해서 웹사이트에 있는 최신 내용을 우리의 PC로 가져오면 된다.</li></ul><p id="6e8ae74a-10a8-4fbd-88b2-408c516457e1" class="">
+</p><ul id="dd54c9e8-f74e-493c-ad30-32929800f434" class="bulleted-list"><li style="list-style-type:disc"><strong>pull 받아오기</strong><ol type="1" id="ee87d216-528d-4269-bce1-14d697a92be0" class="numbered-list" start="1"><li>SourceTree를 열고, 좌측에 있는 브랜치 탭에 있는 main을 더블클릭하자.</li></ol><ol type="1" id="af720944-2325-4458-bea9-f74b812af626" class="numbered-list" start="2"><li>우측 상단의 <code>풀</code> 이라고 적힌 버튼을 클릭하자.</li></ol><ol type="1" id="a3292c27-14a3-4daf-b17a-366b0fb43426" class="numbered-list" start="3"><li>아래 사진처럼 창이 하나 뜰 것이다.
+원격 브랜치란, Github 웹사이트 상에 있는 브랜치를 말한다.
+로컬 브랜치란, 내 PC 상에 있는 브랜치를 말한다.
+즉 저 창에 적힌 내용은, Github 웹사이트 상에 있는 브랜치를 내 PC 상에 있는 브랜치로 가져온다는 뜻이다. 확인을 눌러주자. 끝.<figure id="945b8440-48b5-433a-af64-d27af4593b92" class="image"><a href="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%2018.png"><img style="width:3104px" src="0%20Github%E1%84%85%E1%85%B3%20abf0e/Untitled%2018.png"/></a></figure><p id="7ea0933d-93f9-4762-adf4-74b7bc14b4a3" class="">
+</p><p id="b45d73cb-fe53-49aa-a078-ad058c62467b" class="">
+</p><p id="45b8fdf9-da64-412d-a568-6c873e94ff77" class="">
+</p></li></ol></li></ul><h2 id="aad2be2f-37b5-4538-b1a8-d6957a623d5d" class="">push하려는데 뭔가 로그인하라고 뜬다면 ...</h2><ul id="37a5110b-b114-4b58-b1c9-ab81e5ca0d16" class="bulleted-list"><li style="list-style-type:disc">Github의 보안이 좀 깐깐해져서, 단순하게 Github ID와 PW만으로는 푸시할 수 없게 정책이 바뀌었다. 아래 블로그를 참고해 access token이라는 것을 만들어보자.<figure id="3fc40691-6f00-42a8-9bc9-3d3e1097d36b"><a href="https://curryyou.tistory.com/344" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">GitHub 토큰 인증 로그인: Personal Access Token 생성 및 사용 방법</div><div class="bookmark-description">Git Hub에서 ID/PW기반의 Basic Authentication 인증을 금지 하고, ID/Personal Access Token 방식의 Token Authentication 인증을 요구 하고 있다. 앞으로는 소스코드를 push/clone하려고 하면, 아래와 같은 문구가 뜨면서 잘 되지 않는 상황이 발생할 수 있다. Password authentication is temporarily disabled as part of a brownout. Please use a personal access token instead.</div></div><div class="bookmark-href"><img src="https://t1.daumcdn.net/tistory_admin/static/top/favicon_0630.ico" class="icon bookmark-icon"/>https://curryyou.tistory.com/344</div></div><img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbkDEX2%2Fbtq8wmBr42t%2FkwphdC32jxParnQjHA4e7K%2Fimg.png" class="bookmark-image"/></a></figure></li></ul><ul id="d6159901-b15f-4d06-bb6f-0ec155d5cb02" class="bulleted-list"><li style="list-style-type:disc">로그인하라고 뜨면, Github ID와, 비밀번호를 넣어야할 것 같은 칸에 저 Personal Access Token을 넣어주면 된다. 끝!</li></ul></div></article></body></html>
