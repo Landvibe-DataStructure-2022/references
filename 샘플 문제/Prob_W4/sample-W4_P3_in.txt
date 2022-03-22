@@ -1,0 +1,101 @@
+500 100
+front
+enqueue 365
+isEmpty
+enqueue 785
+isEmpty
+front
+dequeue
+front
+enqueue 636
+rear
+rear
+rear
+isEmpty
+enqueue 27
+dequeue
+rear
+enqueue 58
+size
+rear
+front
+enqueue 53
+dequeue
+enqueue 670
+enqueue 999
+rear
+dequeue
+dequeue
+rear
+enqueue 213
+enqueue 181
+isEmpty
+enqueue 22
+size
+dequeue
+size
+rear
+size
+dequeue
+front
+dequeue
+enqueue 483
+front
+rear
+isEmpty
+isEmpty
+front
+front
+enqueue 510
+dequeue
+front
+front
+front
+enqueue 507
+enqueue 251
+dequeue
+size
+rear
+rear
+dequeue
+front
+isEmpty
+rear
+front
+size
+isEmpty
+size
+size
+rear
+isEmpty
+rear
+size
+size
+rear
+front
+front
+dequeue
+isEmpty
+dequeue
+size
+size
+isEmpty
+isEmpty
+isEmpty
+isEmpty
+front
+rear
+dequeue
+dequeue
+front
+enqueue 849
+isEmpty
+rear
+dequeue
+front
+rear
+isEmpty
+size
+front
+front
+rear
