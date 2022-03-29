@@ -1,0 +1,102 @@
+100
+begin
+end
+insert 9661
+end
+end
+begin
+erase
+print
+print
+find 8030
+begin
+end
+begin
+end
+begin
+begin
+begin
+begin
+begin
+begin
+print
+print
+end
+print
+end
+insert 3683
+print
+end
+--
+begin
+begin
+begin
+end
+find 3683
+end
+insert 1970
+print
+end
+print
+end
+begin
+++
+++
+begin
+end
+insert 4362
+begin
+erase
+begin
+begin
+++
+begin
+end
+begin
+erase
+end
+insert 3450
+begin
+++
+++
+end
+find 4362
+end
+print
+find 4362
+end
+insert 6836
+find 3450
+begin
+find 4362
+find 4362
+begin
+find 3450
+print
+begin
+++
+++
+end
+insert 1934
+find 6836
+end
+insert 8851
+end
+end
+begin
+++
+++
+++
+++
+begin
+begin
+begin
+erase
+find 1934
+end
+insert 6182
+print
+begin
+erase
+begin
+erase
