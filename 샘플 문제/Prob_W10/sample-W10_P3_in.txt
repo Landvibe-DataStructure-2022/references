@@ -1,0 +1,101 @@
+100
+size
+top
+insert 1711
+insert 1471
+size
+insert 6855
+pop
+size
+print
+top
+print
+top
+top
+pop
+pop
+insert 6475
+insert 5351
+top
+top
+top
+insert 6940
+size
+print
+pop
+size
+top
+pop
+top
+size
+top
+isEmpty
+insert 2249
+pop
+print
+isEmpty
+pop
+pop
+top
+top
+size
+insert 8479
+pop
+isEmpty
+size
+top
+insert 2959
+insert 149
+insert 526
+isEmpty
+isEmpty
+isEmpty
+top
+top
+insert 8180
+isEmpty
+size
+print
+pop
+size
+top
+pop
+print
+size
+pop
+insert 1160
+pop
+top
+isEmpty
+print
+insert 7899
+insert 5368
+pop
+print
+size
+print
+insert 1666
+pop
+insert 6897
+print
+insert 6311
+size
+size
+pop
+top
+top
+print
+insert 630
+top
+pop
+top
+insert 3129
+size
+pop
+size
+size
+top
+print
+insert 5674
+print
+print
