@@ -68,14 +68,14 @@ public:
         int probing = 1;
 
         if (hash_table[indexA].valid == ISITEM && probing <= x) {
-            indexA = hash_func_a(indexB + 1, indexA, false);
-            indexB = hash_func_b(indexB + 1, indexB, true);
+            indexA = hash_func_a(indexB + 1, indexA, true);
+            indexB = hash_func_b(indexB + 1, indexB, false);
             probing++;
         }
 
         while (hash_table[indexA].valid == ISITEM && probing <= x) {
-            indexA = hash_func_a(1, indexA, true);
-            indexB = hash_func_b(1, indexB, false);
+            indexA = hash_func_a(1, indexA, false);
+            indexB = hash_func_b(1, indexB, true);
             probing++;
         }
 
