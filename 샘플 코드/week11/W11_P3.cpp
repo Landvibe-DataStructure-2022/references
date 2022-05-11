@@ -9,16 +9,12 @@ private:
     Node *left;
     Node *right;
 
-    bool visit;
-
 public:
     Node(int d) {
         data = d;
         par = nullptr;
         left = nullptr;
         right = nullptr;
-
-        visit = false;
     }
 
     void setLeft(Node *node) {
@@ -35,10 +31,9 @@ public:
 };
 
 class BST {
-private:
+public:
     Node *root;
 
-public:
     BST() {
         root = nullptr;
     }
@@ -83,39 +78,14 @@ public:
         }
     }
 
-    void print(int index) {
-        Node *curNode = root;
-        int curIndex = 0;
-
-        while (curIndex != index) {
-            if (curNode->left != nullptr) {
-                if (!curNode->left->visit) {
-                    curNode = curNode->left;
-                    continue;
-                }
-            }
-
-            if (!curNode->visit) {
-                curIndex++;
-                curNode->visit = true;
-                if (curIndex == index) {
-                    cout << curNode->data << "\n";
-                }
-            }
-
-            if (curNode->right != nullptr) {
-                if (!curNode->right->visit) {
-                    curNode = curNode->right;
-                    continue;
-                }
-            }
-
-            if (curNode == root) {
-                return;
-            } else {
-                curNode = curNode->par;
-            }
+    void print(Node *node) {
+        if (node == nullptr) {
+            return;
         }
+
+        print(node->left);
+        cout << node->data << " ";
+        print(node->right);
     }
 };
 
@@ -139,10 +109,8 @@ int main() {
             bst->insert(data);
         }
 
-        int index;
-        cin >> index;
-
-        bst->findNodeByIndex(index);
+        bst->print(bst->root);
+        cout<<"\n";
     }
 
     return 0;
