@@ -1,0 +1,102 @@
+100 10
+378 1409 1953 306 1295 875 1263 1562 578 963 
+insertEdge 1953 306
+eraseEdge 1409 306
+eraseEdge 1953 378
+eraseEdge 378 875
+incidentEdges 378
+incidentEdges 1953
+incidentEdges 1409
+eraseEdge 1562 1953
+insertEdge 875 1295
+eraseEdge 1953 1562
+eraseEdge 1409 1295
+incidentEdges 1409
+incidentEdges 1295
+incidentEdges 306
+insertEdge 1295 1953
+insertEdge 578 1953
+eraseEdge 578 1953
+insertEdge 1562 1295
+incidentEdges 1562
+insertEdge 378 1953
+insertEdge 1562 963
+incidentEdges 1562
+eraseEdge 1409 963
+insertEdge 875 378
+incidentEdges 1295
+eraseEdge 578 875
+insertEdge 1295 963
+insertEdge 1409 1953
+eraseEdge 1562 1409
+eraseEdge 306 1953
+insertEdge 1562 963
+eraseEdge 1953 1562
+incidentEdges 578
+incidentEdges 963
+eraseEdge 1295 1409
+incidentEdges 306
+insertEdge 1263 378
+eraseEdge 578 1409
+eraseEdge 1263 963
+insertEdge 306 378
+incidentEdges 1562
+incidentEdges 578
+incidentEdges 1562
+incidentEdges 1263
+insertEdge 378 875
+eraseEdge 1263 578
+eraseEdge 963 875
+insertEdge 378 963
+incidentEdges 378
+incidentEdges 1953
+eraseEdge 1953 963
+insertEdge 578 963
+insertEdge 378 1263
+eraseEdge 1263 578
+insertEdge 1295 1953
+insertEdge 1953 1295
+incidentEdges 1953
+eraseEdge 963 1263
+incidentEdges 1263
+incidentEdges 1263
+eraseEdge 963 578
+eraseEdge 1295 1409
+incidentEdges 875
+eraseEdge 963 1263
+insertEdge 306 578
+eraseEdge 1295 963
+incidentEdges 1409
+eraseEdge 963 1263
+insertEdge 378 1295
+incidentEdges 578
+eraseEdge 378 578
+incidentEdges 378
+incidentEdges 306
+insertEdge 578 963
+insertEdge 1953 963
+incidentEdges 306
+eraseEdge 578 875
+eraseEdge 1295 1263
+insertEdge 378 875
+incidentEdges 378
+incidentEdges 578
+eraseEdge 875 578
+insertEdge 1409 1562
+incidentEdges 1295
+incidentEdges 875
+insertEdge 1953 578
+eraseEdge 1409 1263
+eraseEdge 306 578
+eraseEdge 378 1953
+insertEdge 378 963
+eraseEdge 1295 963
+insertEdge 1953 578
+incidentEdges 1953
+eraseEdge 1263 963
+eraseEdge 1295 1562
+insertEdge 1295 306
+insertEdge 1295 1409
+incidentEdges 1953
+eraseEdge 1263 1409
+eraseEdge 1953 1562
